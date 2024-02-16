@@ -1,14 +1,13 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { SplitText } from "./splitText";
 
 const Nav = () => {
   return (
-    <div className="flex justify-center space-x-20 my-20 font-bold">
+    <div className="flex w-full h-fit justify-center space-x-20 font-bold py-20">
       <SplitText
-        className=""
+        className="hover:scale-110 hover:text-teal-400 duration-200 ease-out"
         initial={{ y: "100%" }}
         animate="visible"
         variants={{
@@ -20,10 +19,10 @@ const Nav = () => {
           }),
         }}
       >
-        home
+        about
       </SplitText>
       <SplitText
-        className=""
+        className="hover:scale-110 hover:text-teal-400 duration-200 ease-out"
         initial={{ y: "100%" }}
         animate="visible"
         variants={{
@@ -38,7 +37,7 @@ const Nav = () => {
         projects
       </SplitText>
       <SplitText
-        className=""
+        className="hover:scale-110 hover:text-teal-400 duration-200 ease-out"
         initial={{ y: "100%" }}
         animate="visible"
         variants={{
@@ -50,7 +49,7 @@ const Nav = () => {
           }),
         }}
       >
-        posts
+        thoughts
       </SplitText>
     </div>
   );

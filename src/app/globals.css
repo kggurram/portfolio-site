@@ -6,7 +6,7 @@ div {
   /* border: 1px solid red; */
 }
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -18,15 +18,19 @@ div {
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 7, 12, 20;
   }
-}
+} */
 
-body {
-  cursor: none;
-  color: rgb(var(--foreground-rgb));
+/* body { */
+/* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+* {
+  /* cursor: none; */
+  /* pointer-events: none; */
 }
