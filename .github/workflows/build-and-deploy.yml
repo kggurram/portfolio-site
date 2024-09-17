@@ -7,19 +7,16 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-		
+  build:	
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-
       - uses: actions/setup-node@v2
         with:
           # update the Node version to meet your needs
           node-version: 16
           cache: npm
-
 # snip
       - name: Build
         run: |
@@ -27,7 +24,6 @@ jobs:
           npm set-script build "next build"
           npm set-script export "next export"
           touch out/.nojekyll
-
 # snip
       - name: Deploy
         # https://github.com/JamesIves/github-pages-deploy-action
