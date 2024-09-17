@@ -1,8 +1,6 @@
 import {
   Inter,
   Instrument_Serif,
-  Prata,
-  Bodoni_Moda,
   Noto_Serif_Display,
   Roboto,
   Playfair_Display,
@@ -14,15 +12,9 @@ export const metadata = {
   description: "software engineer",
 };
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap", weight: "400" });
 
 const instrument_serif = Instrument_Serif({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
-});
-
-const bodoni = Bodoni_Moda({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
@@ -49,7 +41,7 @@ const playfair = Playfair_Display({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={playfair.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

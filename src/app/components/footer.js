@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
+import ArticleIcon from "@mui/icons-material/Article";
 
 const footer = () => {
   return (
@@ -33,6 +34,11 @@ const footer = () => {
       </div>
       <div className="flex justify-center w-fit mx-auto lg:w-fit">
         <ul className="flex justify-center space-x-4 ">
+          <li className="hover:scale-110 hover:text-teal-400 duration-200 ease-out">
+            <a target="_blank" href="/resume.pdf">
+              <ArticleIcon />
+            </a>
+          </li>
           <li className="hover:scale-110 hover:text-teal-400 duration-200 ease-out">
             <a target="_blank" href="https://github.com/kggurram">
               <GitHubIcon />

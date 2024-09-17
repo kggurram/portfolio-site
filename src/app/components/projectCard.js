@@ -29,7 +29,7 @@ const ProjectCard = (props) => {
                 1.5, 1,
               ],
             }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 1 }}
           >
             <ArrowOutwardIcon className="text-teal-400" />
           </motion.div>

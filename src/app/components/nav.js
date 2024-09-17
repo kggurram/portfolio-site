@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import HomeIcon from "@mui/icons-material/Home";
 
 const Nav = () => {
   return (
@@ -13,15 +14,17 @@ const Nav = () => {
         animate={{ scale: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="hover:scale-110 hover:text-teal-400 duration-200 ease-out ">
-          <Link href="/">home</Link>
+        <div className="hover:scale-125 text-teal-400 duration-200 ease-out">
+          <Link href="/">
+            <HomeIcon />
+          </Link>
         </div>
         <div className="hover:scale-110 hover:text-teal-400 duration-200 ease-out ">
           <Link href="/pages/projects">projects</Link>
         </div>
-        <div className="hover:scale-110 hover:text-teal-400 duration-200 ease-out ">
+        {/* <div className="hover:scale-110 hover:text-teal-400 duration-200 ease-out ">
           <Link href="/pages/thoughts">thoughts</Link>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );

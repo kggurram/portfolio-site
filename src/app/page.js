@@ -2,6 +2,7 @@
 import Nav from "./components/nav";
 import Hero from "./components/hero";
 import Footer from "./components/footer";
+import Head from "next/head";
 
 export default function Home() {
   return (
