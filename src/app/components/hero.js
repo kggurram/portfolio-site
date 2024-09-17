@@ -1,7 +1,7 @@
 import React from "react";
-import { SplitText } from "./splitText";
-import { AnimatePresence, motion } from "framer-motion";
-import { Button, duration } from "@mui/material";
+import { motion } from "framer-motion";
+import { Button } from "@mui/material";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -9,55 +9,28 @@ const Hero = () => {
       <motion.div
         className="flex"
         initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.3 }}
+        animate={{ scale: [0, 1.2, 1] }}
+        transition={{ duration: 0.4 }}
       >
-        <div className="w-2/3 p-20">
-          <SplitText
-            className="text-6xl font-bold tracking-widest"
-            initial={{ y: "100%" }}
-            animate="visible"
-            variants={{
-              visible: (i) => ({
-                y: -4,
-                transition: {
-                  delay: i * 0.05,
-                },
-              }),
-            }}
-          >
+        <div className="sm:p-12 sm:w-full md:w-full lg:w-full xl:w-10/12 2xl:w-10/12 md:p-20 p-14 mx-auto md:border border-zinc-900 md:rounded-xl">
+          <div className="text-6xl font-bold tracking-widest flex">
             hi, i'm karthik.
-          </SplitText>
-
-          <div className="text-2xl pt-8">
-            <SplitText
-              className=""
-              initial={{ y: "100%" }}
-              animate="visible"
-              variants={{
-                visible: (i) => ({
-                  y: -4,
-                  transition: {
-                    delay: i * 0.05,
-                  },
-                }),
-              }}
-            >
-              i'm a software engineer based in Toronto keen on fullstack
-              development, ML, and building creative projects that matter
-            </SplitText>
           </div>
+
+          <p className="text-2xl pt-8">
+            i'm a software engineer based in Toronto keen on fullstack
+            development, ML, and building creative projects that matter
+          </p>
           <div className="pt-8 w-fit hover:scale-105 duration-200 ease-out">
             <a
               href="/Karthik Gurram - Resume.pdf"
               target="_blank"
-              className="font-bold decoration-3 underline underline-offset-8 decoration-teal-400"
+              className="text-xl decoration-3 underline underline-offset-8 decoration-teal-400"
             >
               paper thing for recruiters
             </a>
           </div>
         </div>
-        <div className="flex w-1/3 justify-center my-auto">image/art</div>
       </motion.div>
     </div>
   );

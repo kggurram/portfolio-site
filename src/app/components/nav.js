@@ -1,56 +1,28 @@
 "use client";
 
 import React from "react";
-import { SplitText } from "./splitText";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Nav = () => {
   return (
-    <div className="flex w-full h-fit justify-center space-x-20 font-bold py-20">
-      <SplitText
-        className="hover:scale-110 hover:text-teal-400 duration-200 ease-out"
-        initial={{ y: "100%" }}
-        animate="visible"
-        variants={{
-          visible: (i) => ({
-            y: -4,
-            transition: {
-              delay: i * 0.05,
-            },
-          }),
-        }}
+    <div className="w-full h-fit mx-10">
+      <motion.div
+        className="flex w-full h-fit justify-center space-x-5 sm:space-x-10 py-10 md:py-20 text-xl"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.3 }}
       >
-        about
-      </SplitText>
-      <SplitText
-        className="hover:scale-110 hover:text-teal-400 duration-200 ease-out"
-        initial={{ y: "100%" }}
-        animate="visible"
-        variants={{
-          visible: (i) => ({
-            y: -4,
-            transition: {
-              delay: i * 0.05,
-            },
-          }),
-        }}
-      >
-        projects
-      </SplitText>
-      <SplitText
-        className="hover:scale-110 hover:text-teal-400 duration-200 ease-out"
-        initial={{ y: "100%" }}
-        animate="visible"
-        variants={{
-          visible: (i) => ({
-            y: -4,
-            transition: {
-              delay: i * 0.05,
-            },
-          }),
-        }}
-      >
-        thoughts
-      </SplitText>
+        <div className="hover:scale-110 hover:text-teal-400 duration-200 ease-out ">
+          <Link href="/">home</Link>
+        </div>
+        <div className="hover:scale-110 hover:text-teal-400 duration-200 ease-out ">
+          <Link href="/pages/projects">projects</Link>
+        </div>
+        <div className="hover:scale-110 hover:text-teal-400 duration-200 ease-out ">
+          <Link href="/pages/thoughts">thoughts</Link>
+        </div>
+      </motion.div>
     </div>
   );
 };
